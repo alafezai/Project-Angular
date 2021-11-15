@@ -9,7 +9,8 @@ import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 @NgModule({
   declarations: [
     AdminComponent,
-    NavbarAdminComponent
+    NavbarAdminComponent,
+    
   ],
   imports: [
     CommonModule,
