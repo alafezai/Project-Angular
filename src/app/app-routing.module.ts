@@ -9,6 +9,7 @@ import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.componen
 
 
 
+
 const routes: Routes = [
   
   { path: 'HelpMe', loadChildren: () => import('./help-me/help-me.module').then(m => m.HelpMeModule) },
@@ -16,6 +17,9 @@ const routes: Routes = [
   { path: 'SignUp' , component: SignupComponent},
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   {path : 'admin/navbar-admin' , component : NavbarAdminComponent},
+  
+  { path: 'module-help', loadChildren: () => import('./module-help/module-help.module').then(m => m.ModuleHelpModule) },
+  
 
 ]
 
