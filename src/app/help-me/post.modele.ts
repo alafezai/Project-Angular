@@ -1,4 +1,10 @@
 export interface Post {
     id : String;
-    title: String;
+    user: String[];
+    sujet:String;
+    datePost:String;
+    nbComent:number;
+    comments:String[];
+    nbJaime:number;
+
 }
