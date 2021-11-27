@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from './post.modele';
+import { posts } from './posts-list';
 
 @Component({
   selector: 'app-help-me',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpMeComponent implements OnInit {
 
+  public postList: Post[] = posts;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.postList)
   }
 
 }
