@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Help } from './../help.model';
+import { Helps } from './../help';
 
 @Component({
   selector: 'app-module-help',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModuleHelpComponent implements OnInit {
 
+  public Posts:Help[]=Helps;
   constructor() { }
 
   ngOnInit(): void {
