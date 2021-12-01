@@ -16,8 +16,9 @@ const routes: Routes = [
   { path: 'SignIn' , component: SigninComponent},
   { path: 'SignUp' , component: SignupComponent},
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
-  {path : 'admin/navbar-admin' , component : NavbarAdminComponent},
+  { path : 'admin/navbar-admin' , component : NavbarAdminComponent},
   
+  //{path : 'notfound', component:},
   { path: 'module-help', loadChildren: () => import('./module-help/module-help.module').then(m => m.ModuleHelpModule) },
   
 
