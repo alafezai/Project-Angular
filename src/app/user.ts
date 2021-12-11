@@ -7,7 +7,6 @@ export const Helps: User[]=[
         password:"0000",
         adresse:"tunis",
         role:1
-
     },
     {
         id:"2",
