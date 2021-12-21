@@ -6,16 +6,18 @@ import { Post } from "src/app/help-me/post.modele";
 @Injectable({
   providedIn: 'root'
 })
-export class CoursesService {
+export class PostesService {
 
   constructor(private http: HttpClient) { }
+
+private apiUrl ='http://localhost:3000/postes';
 
 /**
  * Get all posts
  */
 
 GetAllposts(){
-
+return this.http.get(this.apiUrl);
 }
 
 

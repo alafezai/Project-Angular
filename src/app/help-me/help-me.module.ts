@@ -7,11 +7,13 @@ import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
-    HelpMeComponent
+    HelpMeComponent,
+    
   ],
   imports: [
     CommonModule,
-    HelpMeRoutingModule
+    HelpMeRoutingModule,
+    HttpClientModule,
   ]
 })
 export class HelpMeModule { }
