@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient} from "@angular/common/http";
 
 import { Post } from "src/app/help-me/post.modele";
-
+import { map } from "rxjs/operators";
 @Injectable({
   providedIn: 'root'
 })
@@ -36,7 +36,10 @@ FindPost(id: string){
  * @param post 
  */
 CreatePost(post: any){
-
+return this.http.post<any>(this.apiUrl,post)
+.pipe(map((res:any)=>{
+  return res;
+}));
 }
 
 

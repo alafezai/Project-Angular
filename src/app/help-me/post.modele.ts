@@ -6,5 +6,4 @@ export interface Post {
     nbComent:number;
     comments:String[];
     nbJaime:number;
-
 }
