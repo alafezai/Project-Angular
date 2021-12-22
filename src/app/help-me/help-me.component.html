@@ -1,7 +1,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="container">
    <div class="row" id="rowr">
-      <div class="col-md-12" *ngFor="let post of postList">
+      <div class="col-md-12">
          <div id="content" class="content content-full-width">
             <!-- end profile -->
             <!-- begin profile-content -->
@@ -11,7 +11,69 @@
                   <!-- begin #profile-post tab -->
                   <div class="tab-pane fade active show" id="profile-post">
                      <!-- begin timeline -->
-                     <ul class="timeline">
+
+
+
+                       <!-- begin timeline-time -->
+                       <div class="timeline-time" id="left">
+                        <span class="date">today</span>
+                        <span class="time">04:20</span>
+                     </div>
+                     <!-- end timeline-time -->
+                     <!-- begin timeline-icon -->
+                     <div class="timeline-icon" id="left2">
+                        <a href="javascript:;">&nbsp;</a>
+                     </div>
+                     <!-- end timeline-icon -->
+                     <!-- begin timeline-body -->
+                     <div class="timeline-body" id="bodd">
+                        <div class="timeline-header">
+                           <h4>Créer une publication</h4>
+                           <span class="username"><a href="javascript:;"></a> <small></small></span>
+                        </div>
+                        <div class="timeline-content">
+                           <p>
+                           
+                           </p>
+                           <img src="https://scontent.ftun8-1.fna.fbcdn.net/v/t39.30808-6/260099097_3111920309050015_8903535358316793481_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_ohc=39YZLPaHhB4AX8rU7YD&_nc_ht=scontent.ftun8-1.fna&oh=edc4519163ee124050b6e016f49667db&oe=61A88923" alt="">
+                        </div>
+                        <form [formGroup] = "formvalue">
+                        <div class="timeline-likes">
+                           <div class="stats-right">
+                           </div>
+                           <div class="stats">
+                            
+                              <textarea type="text" width="400"   formControlName="sujet" height="auto"></textarea>
+                            <input type="file">
+                           </div>
+                        </div>
+                        <div class="timeline-comment-box">
+                           <!-- <div class="user"><img src="https://bootdey.com/img/Content/avatar/avatar3.png"></div> -->
+                           <div class="input">
+                             
+                                 <div class="input-group">
+                                    <button type="submit" (click)="savePost()" class="form-control rounded-corner" id="inputComent" >publier</button>
+                                    <span class="input-group-btn p-l-10">
+                                    <!-- <button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button> -->
+                                    </span>
+                                 </div>
+                              
+                           </div>
+                        </div>
+                     </form>
+                     </div>
+
+
+                     <ul class="timeline" *ngFor="let post of postList">
+
+
+
+<!-- /////////////////////////////Formulaire ajout Post///////////////////////////////////// -->
+
+                     
+
+
+<!-- //////////////////////////////End FORM///////////////////////////////// -->
                         <li>
                            <!-- begin timeline-time -->
                            <div class="timeline-time" id="left">

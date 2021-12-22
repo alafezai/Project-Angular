@@ -635,6 +635,7 @@ select.form-control:not([size]):not([multiple]) {
     padding: 6px 23px;
     border-radius: 6px;
     margin-top: 27px;
+    box-shadow: inset 14px 8px 67px 1px #CCC;
 }
 
 .lead {
@@ -652,6 +653,8 @@ select.form-control:not([size]):not([multiple]) {
 padding: 9px;
 border-radius: 39px;
 border: antiquewhite;
+color: white;
+background-color: #0EBFE9;
 }
 #rowr{
     display: flex;
