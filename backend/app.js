@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+const postRouter =  require('./routes/postes')
 
 // Connect DB
 
@@ -10,7 +11,7 @@ mongoose.connect('mongodb://localhost:27017/helpg',
   .then(() => console.log('Connected successfully to MongoDB !'))
   .catch(() => console.log('Connection failed to MongoDB !'));
 
-const poste = require('./models/Post');
+//const poste = require('./models/Post');
 
 const app = express();
 app.use((req, res, next) => {
@@ -20,12 +21,6 @@ app.use((req, res, next) => {
     next();
   });
 
-app.get('/api/postes',(req,res)=>{
-   poste.find()
-   .then(postes=>res.status(200).json(postes))
-   .catch(err=>res.status(400).json({error : 'error : '+err.message}));
-    // res.json(posts);
-    // res.send('hello word');
-})
+app.use('/api/postes',postRouter);
 
 module.exports = app;
