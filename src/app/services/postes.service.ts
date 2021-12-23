@@ -10,7 +10,7 @@ export class PostesService {
 
   constructor(private http: HttpClient) { }
 
-private apiUrl ='http://localhost:3000/postes';
+private apiUrl ='http://localhost:3000/api/postes';
 
 /**
  * Get all posts
