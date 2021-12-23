@@ -1,5 +1,14 @@
 const express = require('express');
+const mongoose = require('mongoose');
 
+
+// Connect DB
+
+mongoose.connect('mongodb://localhost:27017/helpgroup',
+  { useNewUrlParser: true,
+    useUnifiedTopology: true })
+  .then(() => console.log('Connected successfully to MongoDB !'))
+  .catch(() => console.log('Connection failed to MongoDB !'));
 
 const app = express();
 app.use((req, res, next) => {
@@ -8,7 +17,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
   });
-  
+
 app.get('/api/postes',(req,res)=>{
 const posts= [
     {
