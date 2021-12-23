@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 const postRouter =  require('./routes/postes')
 
+const app = express();
 // Connect DB
 
 mongoose.connect('mongodb://localhost:27017/helpg',
@@ -12,8 +13,8 @@ mongoose.connect('mongodb://localhost:27017/helpg',
   .catch(() => console.log('Connection failed to MongoDB !'));
 
 //const poste = require('./models/Post');
+app.use(express.json());
 
-const app = express();
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
