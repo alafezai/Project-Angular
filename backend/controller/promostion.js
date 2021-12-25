@@ -1,5 +1,4 @@
-// const Post = require('./../models/Post');
-const poste = require('./../models/Post');
+const promostion = require('./../models/promostion');
 
 /**
  * 
@@ -7,8 +6,8 @@ const poste = require('./../models/Post');
  * GET ALL POSTES
  */
  exports.all = (req,res)=>{
-    poste.find()
-    .then(postes=>res.status(200).json(postes))
+    promostion.find()
+    .then(promostions=>res.status(200).json(promostions))
     .catch(err=>res.status(400).json({error : 'error : '+err.message}));
  };
 
@@ -20,8 +19,8 @@ const poste = require('./../models/Post');
   * FIND POSTE BY ID
   */
 exports.get = (req,res)=>{
-    poste.findOne({_id : req.params.id})
-    .then(postes=>res.status(200).json(postes))
+    promostion.findOne({_id : req.params.id})
+    .then(promostions=>res.status(200).json(promostions))
     .catch(err=>res.status(400).json({error : 'error : '+err.message}));
  } ;
 
@@ -32,11 +31,11 @@ exports.get = (req,res)=>{
   * SAVE NEW POST
   */
 exports.create = (req,res)=>{
-     const post  = new Post({
+     const promostion  = new promostion({
          ...req.body
      });
     post.save()
-    .then(()=>res.status(200).json("Post created !!!!!"))
+    .then(()=>res.status(200).json("promostion created !!!!!"))
     .catch(err=>res.status(400).json({error : 'error : '+err.message}));
  };
 
@@ -46,8 +45,8 @@ exports.create = (req,res)=>{
   */
 
   exports.update = (req,res)=>{
-   Post.updateOne({_id  : req.params.id}, {...req.body, _id : req.params.id})
-   .then(()=>res.status(200).json("Post update succ !! "))
+    promostion.updateOne({_id  : req.params.id}, {...req.body, _id : req.params.id})
+   .then(()=>res.status(200).json("promostion update succ !! "))
    .catch(err=>res.status(400).json({error : 'error : '+err.message}));
 };
 
@@ -56,7 +55,7 @@ exports.create = (req,res)=>{
   */
 
  exports.delete = (req,res)=>{
-    Post.deleteOne({_id  : req.params.id})
-    .then(()=>res.status(200).json("Post is deleted !! "))
+    promostion.deleteOne({_id  : req.params.id})
+    .then(()=>res.status(200).json("promostion is deleted !! "))
     .catch(err=>res.status(400).json({error : 'error : '+err.message}));
  };
