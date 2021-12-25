@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const postRouter =  require('./routes/postes')
+const promostionRouter =  require('./routes/promostionroute')
 
 const app = express();
 // Connect DB
@@ -23,5 +24,6 @@ app.use((req, res, next) => {
   });
 
 app.use('/api/postes',postRouter);
+app.use('/api/promostions',promostionRouter);
 
 module.exports = app;

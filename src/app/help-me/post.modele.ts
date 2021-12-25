@@ -1,5 +1,4 @@
 export interface Post {
-    id : String;
     user: String[];
     sujet: String;
     datePost:String;
