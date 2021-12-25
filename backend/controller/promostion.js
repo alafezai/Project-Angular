@@ -31,10 +31,10 @@ exports.get = (req,res)=>{
   * SAVE NEW POST
   */
 exports.create = (req,res)=>{
-     const promostion  = new promostion({
+     const promostionn  = new promostion({
          ...req.body
      });
-    post.save()
+     promostionn.save()
     .then(()=>res.status(200).json("promostion created !!!!!"))
     .catch(err=>res.status(400).json({error : 'error : '+err.message}));
  };
