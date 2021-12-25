@@ -38,7 +38,7 @@ export class HelpMeComponent implements OnInit {
       alert("Post is saved succsuful");
     },
     err=>{
-      alert("try again somthing worng");
+      console.log(err.mesage);
     })
   }
 
