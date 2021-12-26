@@ -2,8 +2,8 @@
 const poste = require('./../models/Post');
 
 /**
- * 
- * 
+ *
+ *
  * GET ALL POSTES
  */
  exports.all = (req,res)=>{
@@ -15,8 +15,8 @@ const poste = require('./../models/Post');
 
 
  /**
-  * 
-  * 
+  *
+  *
   * FIND POSTE BY ID
   */
 exports.get = (req,res)=>{
@@ -27,8 +27,8 @@ exports.get = (req,res)=>{
 
 
 /**
-  * 
-  * 
+  *
+  *
   * SAVE NEW POST
   */
 exports.create = (req,res)=>{
