@@ -5,7 +5,7 @@ import { PromostionComponent } from "./promostionComponent/promostion.component"
 
 const routes: Routes = [
   { path: "", component: PromostionComponent },
-  { path: "testadmin", component: PromostionAdminComponent },
+  { path: "admin", component: PromostionAdminComponent },
 
 ];
 
