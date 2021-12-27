@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PromostionComponent } from './promostionComponent/promostion.component';
 import { PromostionRoutingModule } from './promostion.routing.module';
 import { PromostionAdminComponent } from './promostionAdminComponent/promostionAdmin.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -14,6 +15,7 @@ import { PromostionAdminComponent } from './promostionAdminComponent/promostionA
   imports: [
     CommonModule,
     PromostionRoutingModule,
+    HttpClientModule,
   ]
 })
 export class PromostionModule { }
