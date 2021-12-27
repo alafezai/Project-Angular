@@ -41,17 +41,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+
+
+
+                    <tr *ngFor="let promo of promostionList">
 						<td>
 							<span class="custom-checkbox">
 								<input type="checkbox" id="checkbox1" name="options[]" value="1">
 								<label for="checkbox1"></label>
 							</span>
 						</td>
-                        <td>SMART PHONE</td>
-                        <td>MYTEK</td>
-						<td>89</td>
-                        <td>1</td>
+                        <td>{{promo.name}}</td>
+                        <td>{{promo.socite}}</td>
+						<td>{{promo.promoprice}}</td>
+                        <td>{{promo.enable}}</td>
                         <td>
                             <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                             <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>

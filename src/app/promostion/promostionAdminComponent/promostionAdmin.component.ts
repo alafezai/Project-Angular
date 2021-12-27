@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PromostionsService } from 'src/app/services/promostions.service';
 
 @Component({
   selector: 'promotionadmin-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['promostionAdmin.component.css']
 })
 export class PromostionAdminComponent {
-  title = 'Promostion Admin';
+  public promostionList: any = [];
+  constructor(
+    private promostionService : PromostionsService
+  ) { }
+
+  ngOnInit(): void {
+  this.promostionService.GetAllpromostions().subscribe(
+    res=>this.promostionList = res
+  )
+  }
 }

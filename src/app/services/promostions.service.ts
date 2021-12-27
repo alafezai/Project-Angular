@@ -9,7 +9,7 @@ export class PromostionsService {
 
   constructor(private http: HttpClient) { }
 
-private apiUrl ='http://localhost:3000/api/postes';
+private apiUrl ='http://localhost:3000/api/promostions';
 
 /**
  * Get all posts
@@ -22,7 +22,7 @@ return this.http.get(this.apiUrl);
 
 /**
  * Get cour by ID
- * @param id 
+ * @param id
  */
 FindPoromistion(id: string){
 
@@ -32,7 +32,7 @@ FindPoromistion(id: string){
 
 /**
  * insert cour
- * @param post 
+ * @param post
  */
 CreatePromostion(promostion: any){
 return this.http.post<any>(this.apiUrl,promostion)
@@ -44,8 +44,8 @@ return this.http.post<any>(this.apiUrl,promostion)
 
 /**
  * Update Post by ID
- * @param id 
- * @param post 
+ * @param id
+ * @param post
  */
 updatepromostion(id: string , post: any){
 
@@ -53,7 +53,7 @@ updatepromostion(id: string , post: any){
 
 /**
  * Delete post by ID
- * @param id 
+ * @param id
  */
 DeletePromostion(id:string){
 
