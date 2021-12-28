@@ -16,7 +16,7 @@ export class HelpMeComponent implements OnInit {
   public postMaodel: PostModel = new PostModel();
 
   constructor(
-    private formBuilber : FormBuilder,  
+    private formBuilber : FormBuilder,
     private postesService: PostesService
   ) { }
 
@@ -32,7 +32,13 @@ export class HelpMeComponent implements OnInit {
 
 
   savePost(){
-    this.postMaodel.sujet = this.formvalue.value.sujet;
+   // this.postMaodel.sujet = this.formvalue.value.sujet;
+    this.postMaodel.user=[];
+    this.postMaodel.comments=[];
+    this.postMaodel.datePost ="";
+    this.postMaodel.nbComent=0;
+    this.postMaodel.nbJaime=0;
+    this.postMaodel.sujet="";
     this.postesService.CreatePost(this.postMaodel)
     .subscribe(res=>{
       alert("Post is saved succsuful");

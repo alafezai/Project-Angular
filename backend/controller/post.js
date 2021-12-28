@@ -32,7 +32,7 @@ exports.get = (req,res)=>{
   * SAVE NEW POST
   */
 exports.create = (req,res)=>{
-     const post  = new Post({
+     const post  = new poste({
          ...req.body
      });
     post.save()
