@@ -37,7 +37,7 @@ FindPost(id: string){
  * insert cour
  * @param post
  */
-CreatePost(post: PostModel): Observable<any>{
+CreatePost(post: any){
 return this.http.post(this.apiUrl,post)
 .pipe(map((res:any)=>{
   return res;
