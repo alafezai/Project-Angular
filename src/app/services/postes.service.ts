@@ -3,6 +3,8 @@ import { HttpClient} from "@angular/common/http";
 
 import { Post } from "src/app/help-me/post.modele";
 import { map } from "rxjs/operators";
+import { PostModel } from '../help-me/post';
+import { Observable } from 'rxjs/internal/Observable';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +25,7 @@ return this.http.get(this.apiUrl);
 
 /**
  * Get cour by ID
- * @param id 
+ * @param id
  */
 FindPost(id: string){
 
@@ -33,10 +35,10 @@ FindPost(id: string){
 
 /**
  * insert cour
- * @param post 
+ * @param post
  */
-CreatePost(post: any){
-return this.http.post<any>(this.apiUrl,post)
+CreatePost(post: PostModel): Observable<any>{
+return this.http.post(this.apiUrl,post)
 .pipe(map((res:any)=>{
   return res;
 }));
@@ -45,8 +47,8 @@ return this.http.post<any>(this.apiUrl,post)
 
 /**
  * Update Post by ID
- * @param id 
- * @param post 
+ * @param id
+ * @param post
  */
 updateCour(id: string , post: any){
 
@@ -54,7 +56,7 @@ updateCour(id: string , post: any){
 
 /**
  * Delete post by ID
- * @param id 
+ * @param id
  */
 DeletePost(id:string){
 

@@ -13,5 +13,5 @@ export class PostModel implements Post{
 
 
     PostModel(){}
-    
+
 }
