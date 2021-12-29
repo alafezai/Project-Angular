@@ -17,4 +17,21 @@ export class PromostionAdminComponent {
     res=>this.promostionList = res
   )
   }
+
+
+  refreshHome(){
+    this.promostionService.GetAllpromostions().subscribe(
+      res=>this.promostionList = res
+    )
+  }
+
+  deletepromostion(promo : any){
+  this.promostionService.DeletePromostion(promo._id).subscribe(
+    res=>{alert("delete Sucsseful");
+    this.refreshHome();},
+    err=>{console.log(err)}
+  )
+
+  }
+
 }
