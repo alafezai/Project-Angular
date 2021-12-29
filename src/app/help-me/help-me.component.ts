@@ -49,7 +49,7 @@ export class HelpMeComponent implements OnInit {
 
 
   savePost(){
-   this.postMaodel.sujet = this.formvalue.value.sujet;
+    this.postMaodel.sujet = this.formvalue.value.sujet;
     // this.postMaodel.user=[];
     // this.postMaodel.comments=[];
     // this.postMaodel.datePost ="";
@@ -66,6 +66,7 @@ export class HelpMeComponent implements OnInit {
       console.log(err.mesage);
     })
   }
+
 
 
 }

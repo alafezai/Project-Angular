@@ -8,7 +8,7 @@ const userRouter = require('./routes/users');
 const app = express();
 // Connect DB
 
-mongoose.connect('mongodb://localhost:27017/projetAngular',
+mongoose.connect('mongodb://localhost:27017/helpg',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connected successfully to MongoDB !'))
