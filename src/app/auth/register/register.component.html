@@ -1,0 +1,51 @@
+<main class="form-signin">
+  <div *ngIf="signupForm.dirty && signupForm.invalid" class="alert alert-danger alert-dismissible fade show"
+  role="alert">
+  <p *ngIf="signupForm.controls.name.errors?.required">The name is required</p>
+  <p *ngIf="signupForm.controls.email.errors?.email">Please enter a valid email</p>
+  <p *ngIf="signupForm.controls.email.errors?.required">An email is required</p>
+  <p *ngIf="signupForm.controls.email.errors?.used">Email already used</p>
+  <p *ngIf="signupForm.controls.password.errors?.required">A password is required</p>
+  <p *ngIf="signupForm.controls.password.errors?.minlength">A password is minimum 6 characters length</p>
+  <p *ngIf="signupForm.controls.confirm_password.errors?.required">A password confirm is required</p>
+  <p *ngIf="signupForm.controls.confirm_password.errors?.NoPassswordMatch">The password confirm doesn't match
+  </p>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    <form [formGroup]="signupForm" (ngSubmit)= "signupUser()">
+      <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+  
+      <div class="form-floating">
+        <input type="text" formControlName="name" class="form-control" id="floatingName" placeholder="Name"
+        [class.is-invalid]="signupForm.dirty && signupForm.controls.name.invalid"
+        [class.is-valid]="signupForm.dirty && signupForm.controls.name.valid">
+        <label for="floatingName">Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="email" formControlName="email" class="form-control" id="floatingInput"
+          placeholder="name@example.com"
+          [class.is-invalid]="signupForm.dirty && signupForm.controls.email.invalid"
+          [class.is-valid]="signupForm.dirty && signupForm.controls.email.valid">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" formControlName="password" class="form-control" id="floatingPassword"
+          placeholder="Password"
+          [class.is-invalid]="signupForm.dirty && signupForm.controls.password.invalid"
+          [class.is-valid]="signupForm.dirty && signupForm.controls.password.valid">
+        <label for="floatingPassword">Password</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" formControlName="confirm_password" class="form-control" id="floatingConfirmPassword"
+          placeholder="Confirm password" 
+          [class.is-invalid]="signupForm.dirty && signupForm.controls.confirm_password.invalid"
+          [class.is-valid]="signupForm.dirty && signupForm.controls.confirm_password.valid">
+     
+        <label for="floatingConfirmPassword">Confirm password</label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit" name="submit">Sign up</button>
+      <p class="mt-5 mb-3">Already have an account? <a href="login.php">Login here!</a></p>
+      <p class="mt-5 mb-3 text-muted">&copy; ISET Bizerte-DSI3 - 2021</p>
+    </form>
+  </main>
+  
