@@ -9,7 +9,7 @@ export class PromostionsService {
 
   constructor(private http: HttpClient) { }
 
-private apiUrl ='http://localhost:3000/api/promostions';
+private apiUrl ='http://localhost:3000/api/promostions/';
 
 /**
  * Get all posts
@@ -35,7 +35,7 @@ FindPoromistion(id: string){
  * @param post
  */
 CreatePromostion(promostion: any){
-return this.http.post<any>(this.apiUrl,promostion)
+return this.http.post(this.apiUrl,promostion)
 .pipe(map((res:any)=>{
   return res;
 }));
@@ -47,16 +47,19 @@ return this.http.post<any>(this.apiUrl,promostion)
  * @param id
  * @param post
  */
-updatepromostion(id: string , post: any){
-
+updatepromostion(id: string , promo: any){
+  return this.http.put("http://localhost:3000/api/promostions/"+id,promo)
+  .pipe(map((res:any)=>{
+    return res;
+  }));
 }
 
 /**
  * Delete post by ID
  * @param id
  */
-DeletePromostion(id:string){
-
+DeletePromostion(id:any){
+  return this.http.delete<any>('http://localhost:3000/api/promostions/'+id);
 }
 
 
