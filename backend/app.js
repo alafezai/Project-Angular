@@ -1,10 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
-
+const cors = require('cors');
 const postRouter =  require('./routes/postes')
 const promostionRouter =  require('./routes/promostionroute')
 const userRouter = require('./routes/users');
-
 const app = express();
 // Connect DB
 
@@ -16,6 +15,9 @@ mongoose.connect('mongodb://localhost:27017/helpg',
 
 //const poste = require('./models/Post');
 app.use(express.json());
+app.use(cors({
+  origin: 'http://localhost:4200'
+}));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');

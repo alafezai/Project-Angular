@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { Router, RouterModule, Routes } from '@angular/router';
 import { NavbarAdminComponent } from './admin/navbar-admin/navbar-admin.component';
 import { AuthModule } from './auth/auth.module';
+import { CustomerModule } from './customer/customer.module';
+import { AuthGuard } from './auth.guard';
 
 
 
@@ -19,6 +21,10 @@ const routes: Routes = [
   { path: 'module-help', loadChildren: () => import('./module-help/module-help.module').then(m => m.ModuleHelpModule) },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
 
+  
+  { path: 'customer', loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule), canActivate: [AuthGuard] },
+  
+
 ]
 
 @NgModule({
@@ -27,7 +33,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
-    AuthModule
+    AuthModule,
+    CustomerModule
   ]
 })
 export class AppRoutingModule { }
