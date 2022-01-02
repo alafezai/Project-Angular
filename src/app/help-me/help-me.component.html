@@ -1,6 +1,5 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-<sidebar></sidebar>
 
 <div class="container">
    <div class="row" id="rowr">
@@ -47,7 +46,8 @@
                            <div class="stats">
 
                               <textarea type="text" width="400"   formControlName="sujet" height="auto"></textarea>
-                            <input type="file">
+
+                              <button class="btn btn-primary f-s-12 rounded-corner"  id="btna" type="button">Import photo<input type="file" class="custom-file-input"></button>
                            </div>
                         </div>
                         <div class="timeline-comment-box">
@@ -55,7 +55,7 @@
                            <div class="input">
 
                                  <div class="input-group">
-                                    <button type="submit" (click)="savePost()" class="form-control rounded-corner" id="inputComent" >publier</button>
+                                    <button type="submit" (click)="savePost()" class="form-control rounded-corner" id="inputButton" >publier</button>
                                     <span class="input-group-btn p-l-10">
                                     <!-- <button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button> -->
                                     </span>
@@ -80,8 +80,7 @@
                         <li>
                            <!-- begin timeline-time -->
                            <div class="timeline-time" id="left">
-                              <span class="date">today</span>
-                              <span class="time">04:20</span>
+                              <span class="time">{{post.datePost}}</span>
                            </div>
                            <!-- end timeline-time -->
                            <!-- begin timeline-icon -->
@@ -110,7 +109,7 @@
                                     <span class="fa-stack fa-fw stats-icon">
                                     <i class="fa fa-circle fa-stack-2x text-danger"></i>
                                     <i class="fa fa-heart fa-stack-1x fa-inverse t-plus-1"></i>
-                                    </span>
+                                        </span>
                                     <span class="fa-stack fa-fw stats-icon">
                                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
                                     <i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i>
@@ -130,7 +129,7 @@
                                        <div class="input-group">
                                           <input type="text" class="form-control rounded-corner" id="inputComent" placeholder="Write a comment...">
                                           <span class="input-group-btn p-l-10">
-                                          <button class="btn btn-primary f-s-12 rounded-corner" type="button">Comment</button>
+                                          <button class="btn btn-primary f-s-12 rounded-corner"  id="btna" type="button">Comment</button>
                                           </span>
                                        </div>
                                     </form>

@@ -7,3 +7,14 @@ width: 100%;
 #navbarNav{
     justify-content: center;
 }
+#color{
+  color: white;
+}
+
+
+#FixNavBar
+  {
+    position: fixed;
+    width: 100%;
+    z-index: 12345;
+}
