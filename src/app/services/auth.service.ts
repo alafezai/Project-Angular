@@ -38,7 +38,7 @@ export class AuthService {
         .subscribe((res: any) => {
           this.isLoggedIn = true;
           this.localStorageService.set('access_token', res.token);
-          this.router.navigate(['customer/profile/' + res.userId]);
+          this.router.navigate(['/HelpMe']);
         // this.getUserProfile(res.userId).subscribe((res) => {
         //   this.localStorageService.set('user', {email: res.email, id: res._id, name: res.name});
         // })
