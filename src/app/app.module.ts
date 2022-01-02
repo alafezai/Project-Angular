@@ -8,11 +8,14 @@ import { SideBarComponent } from './sideBar/sidebar.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AuthInterceptor } from "./auth.interceptor";
+import { IndexComponent } from './index/index.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    IndexComponent,
 
   ],
   imports: [
