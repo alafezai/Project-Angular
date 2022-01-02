@@ -11,7 +11,7 @@
   <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;" >
       <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3" id ="toppp" >
           <div class="col" *ngFor="let promo of promostionList">
-              <div class="card h-100 shadow-sm"> <img src="https://www.freepnglogos.com/uploads/notebook-png/download-laptop-notebook-png-image-png-image-pngimg-2.png" class="card-img-top" alt="...">
+              <div class="card h-100 shadow-sm"> <img src="{{promo.image}}" class="card-img-top" alt="...">
                   <div class="card-body">
                       <div class="clearfix mb-3"> <span class="float-start badge rounded-pill bg-primary">{{promo.socite}}</span> <span class="float-end price-hp">{{promo.promoprice}} TND</span> </div>
                       <h5 class="card-title">{{promo.name}}</h5>
