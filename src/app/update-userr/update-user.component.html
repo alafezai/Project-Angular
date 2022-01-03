@@ -1,0 +1,33 @@
+<div style="margin-top: 140px">
+   
+    <div style="margin-top: 140px">
+      <h3 style="color: red; font-size: 40px">Update User</h3>
+      <br>
+    <div style="width: 400px;">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" class="form-control" id="nom" required [(ngModel)]="user.fullName" name="nom">
+        </div>
+        <br><br>
+        <div class="form-group">
+          <label for="name">Email</label>
+          <input type="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email">
+        </div>
+        <br><br>
+        <div class="form-group">
+          <label for="name">Password</label>
+          <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+        </div>          
+          <br><br>
+          <div class="form-group">
+            <label for="name">Role</label>
+            <input type="text" class="form-control" id="role" required [(ngModel)]="user.role" name="role">
+          </div>          
+            <br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    
+    </div>
+  </div>
