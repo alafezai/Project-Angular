@@ -21,7 +21,7 @@ const routes: Routes = [
   { path : 'admin/navbar-admin' , component : NavbarAdminComponent},
   { path: 'promostion', loadChildren: () => import('./promostion/promostion.module').then(m => m.PromostionModule) },
   //{path : 'notfound', component:},
-  { path: 'module-help', loadChildren: () => import('./module-help/module-help.module').then(m => m.ModuleHelpModule) },
+  { path: 'module-help', loadChildren: () => import('./help/module-help.module').then(m => m.ModuleHelpModule) },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
 
   { path: 'customer', loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule), canActivate: [AuthGuard] },

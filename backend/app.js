@@ -4,6 +4,7 @@ const cors = require('cors');
 const postRouter =  require('./routes/postes')
 const promostionRouter =  require('./routes/promostionroute')
 const userRouter = require('./routes/users');
+const helpRouter = require('./routes/helpR');
 const app = express();
 // Connect DB
 
@@ -29,5 +30,6 @@ app.use((req, res, next) => {
 app.use('/api/postes',postRouter);
 app.use('/api/promostions',promostionRouter);
 app.use('/api/auth', userRouter);
+app.use('/api/help',helpRouter);
 
 module.exports = app;

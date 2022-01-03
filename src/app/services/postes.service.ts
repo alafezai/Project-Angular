@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from "@angular/common/http";
-
-import { Post } from "src/app/help-me/post.modele";
 import { map } from "rxjs/operators";
-import { PostModel } from '../help-me/post';
-import { Observable } from 'rxjs/internal/Observable';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,7 +21,7 @@ return this.http.get(this.apiUrl);
 
 
 /**
- * Get cour by ID
+ * Get post by ID
  * @param id
  */
 FindPost(id: string){
@@ -34,7 +31,7 @@ FindPost(id: string){
 
 
 /**
- * insert cour
+ * insert post
  * @param post
  */
 CreatePost(post: any){
